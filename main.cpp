@@ -49,8 +49,8 @@ int main(int argc, char *argv[]) {
 
   // Set dirs variables
   string ROOTDIR = parser.get<string>("path");
-  string LABELS = "demo/ssd_mobilenet_v1_egohands/labels_map.pbtxt";
-  string GRAPH = "demo/ssd_mobilenet_v1_egohands/frozen_inference_graph.pb";
+  string LABELS = "models/ssd_mobilenet_v1_egohands/labels_map.pbtxt";
+  string GRAPH = "models/ssd_mobilenet_v1_egohands/frozen_inference_graph.pb";
 
   // Set input & output nodes names
   string inputLayer = "image_tensor:0";
