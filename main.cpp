@@ -49,8 +49,12 @@ int main(int argc, char *argv[]) {
 
   // Set dirs variables
   string ROOTDIR = parser.get<string>("path");
-  string LABELS = "models/ssd_mobilenet_v1_egohands/labels_map.pbtxt";
-  string GRAPH = "models/ssd_mobilenet_v1_egohands/frozen_inference_graph.pb";
+  //  string LABELS = "models/ssd_mobilenet_v1_egohands/labels_map.pbtxt";
+  //  string GRAPH =
+  //  "models/ssd_mobilenet_v1_egohands/frozen_inference_graph.pb";
+
+  string LABELS = "models/idcard/labels_map.pbtxt";
+  string GRAPH = "models/idcard/frozen_inference_graph.pb";
 
   // Set input & output nodes names
   string inputLayer = "image_tensor:0";
@@ -82,7 +86,7 @@ int main(int argc, char *argv[]) {
   Mat frame;
   Tensor tensor;
   std::vector<Tensor> outputs;
-  double thresholdScore = 0.5;
+  double thresholdScore = 0.95;
   double thresholdIOU = 0.8;
 
   // FPS count
